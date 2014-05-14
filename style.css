@@ -1,0 +1,92 @@
+body {
+    background-color: lightgrey;
+}
+
+#mainContent {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border: 2px black solid;
+    width: 500px;
+    height: 500px;
+    padding: 10px;
+    margin-top: 20px;
+
+    background-color: lightgoldenrodyellow;
+    border-radius: 3px;
+    padding-top: 5px;
+    box-shadow: 5px 5px 2px #888;
+    position: relative;
+    font-size: 11px;
+
+    display: none;
+}
+
+#questionDiv {
+    color: black;
+    font-family: Verdana, "New Times Roman";
+    font-size: 11px;
+    display: none;
+}
+
+#resultsDiv {
+    color: blue;
+    font-family: Verdana, "New Times Roman";
+    font-size: 11px;
+}
+
+#loginDiv {
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px black solid;
+    width: 200px;
+    height: auto;
+    padding: 10px;
+    background-color: lightgoldenrodyellow;
+    border-radius: 3px;
+    margin: auto;
+    padding-top: 5px;
+    box-shadow: 5px 5px 2px #888;
+    position: relative;
+    font-family: Verdana, "New Times Roman";
+    font-size: 11px;
+}
+
+#username {
+    display: block;
+}
+
+#password {
+    display: block;
+}
+
+#loginMessage {
+    font-family: Verdana, "New Times Roman";
+    font-size: 10px;
+    color: red;
+    margin-bottom: 3px;
+    font-weight: bold;
+}
+
+#globalMessage {
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px black solid;
+    width: 500px;
+    height: auto;
+    padding: 10px;
+    background-color: lightgoldenrodyellow;
+    border-radius: 3px;
+    margin: auto;
+    padding-top: 5px;
+    -moz-box-shadow: 5px 5px 2px #888;
+    -webkit-box-shadow: 5px 5px 2px #888;
+    box-shadow: 5px 5px 2px #888;
+    position: relative;
+    font-family: Verdana, "New Times Roman";
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: dodgerblue;
+    display:none
+}

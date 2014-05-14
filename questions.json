@@ -1,0 +1,30 @@
+{"allQuestions": [
+    {
+        "question": "Which of the following is NOT a macro nutrient?",
+        "choices": ["Protein", "Alcohol", "Fiber", "Carbohydrate"],
+        "correctAnswer": "Fiber",
+        "yourAnswer": false,
+        "selected": ""
+    },
+    {
+        "question": "How many calories are in a gram of fat?",
+        "choices": ["7", "5", "3", "9"],
+        "correctAnswer": "9",
+        "yourAnswer": false,
+        "selected": ""
+    },
+    {
+        "question": "Which of the following is a power lift?",
+        "choices": ["Power Clean", "Bench Press", "Snatch", "Rack Pull"],
+        "correctAnswer": "Bench Press",
+        "yourAnswer": false,
+        "selected": ""
+    },
+    {
+        "question": "Which of the following is NOT a BCAA?",
+        "choices": ["Valine", "Taurine", "Leucine", "Isoleucine"],
+        "correctAnswer": "Taurine",
+        "yourAnswer": false,
+        "selected": ""
+    }
+]}
