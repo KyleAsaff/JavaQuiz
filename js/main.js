@@ -12,34 +12,46 @@ $(window).load(function () {
 
         var mainContent = $('#mainContent');
 
-        $('#create').on('click', function () {
-            if($('#username').val() === "" || $('#password').val() === "") {
-                $('#loginMessage').empty();
-                $('#loginMessage').text("Oops! You left a text block blank");
-            }
-            else {
-                localStorage.setItem('user', $('#username').val());
-                localStorage.setItem('pass', $('#password').val());
-                $('#username').val('');
-                $('#password').val('');
-                $('#loginMessage').empty();
-                $('#loginMessage').text("Account creation successful! You may now login.");
-            }
-        });
 
-        $('#login').on('click', function () {
-           if(localStorage.user === $('#username').val() && localStorage.pass === $('#password').val())  {
-               $('#loginDiv').fadeOut("slow", function() {
-                   $('#globalMessage').text("Welcome " + localStorage.user + "! Let's test your knowledge.");
-                   $('#globalMessage').fadeIn('slow');
-                        askQuestion(0);
-                   });
-           }
-           else {
-               $('#loginMessage').empty();
-               $('#loginMessage').text("You entered the wrong username or password.");
-           }
-        });
+     if($.cookie("remember") === undefined) {
+         $('#loginDiv').show();
+         $('#create').on('click', function () {
+             if ($('#username').val() === "" || $('#password').val() === "") {
+                 $('#loginMessage').empty();
+                 $('#loginMessage').text("Oops! You left a text block blank");
+             }
+             else {
+                 localStorage.setItem('user', $('#username').val());
+                 localStorage.setItem('pass', $('#password').val());
+                 $('#username').val('');
+                 $('#password').val('');
+                 $('#loginMessage').empty();
+                 $('#loginMessage').text("Account creation successful! You may now login.");
+             }
+         });
+
+         $('#login').on('click', function () {
+             if (localStorage.user === $('#username').val() && localStorage.pass === $('#password').val()) {
+                 $('#loginDiv').fadeOut("slow", function () {
+
+                     $.cookie("remember", localStorage.user);
+
+                     $('#globalMessage').text("Welcome " + localStorage.user + "! Let's test your knowledge.");
+                     $('#globalMessage').fadeIn('slow');
+                     askQuestion(0);
+                 });
+             }
+             else {
+                 $('#loginMessage').empty();
+                 $('#loginMessage').text("You entered the wrong username or password.");
+             }
+         });
+     }
+     else {
+         $('#globalMessage').text("Welcome " + $.cookie('remember') + "! Let's test your knowledge.");
+         $('#globalMessage').fadeIn('slow');
+         askQuestion(0);
+     }
 
         function calculateScore() {
             for (var j = 0; j < allQuestions.length; j++) {
